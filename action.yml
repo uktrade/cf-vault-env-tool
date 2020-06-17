@@ -1,0 +1,31 @@
+name: "CF vault var Action"
+description: "Deply vars from internal vault into CF"
+inputs:
+  vault_url:
+    description: "Target API Endpoint of vault"
+    required: true
+  vault_token:
+    description: "Access token vault"
+    required: true
+  cf_username:
+    description: "Username for API authentication"
+    required: true
+  cf_password:
+    description: "Password for API authentication"
+    required: true
+  cf_domain:
+    description: "Target Organization"
+    required: false
+  paas_namespace:
+    description: "Target Space"
+    required: false
+  paas_env:
+    description: "Target Environment"
+    required: false
+  paas_app_name:
+    description: "Application Name"
+    required: false
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  
